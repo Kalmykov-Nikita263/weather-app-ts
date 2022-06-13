@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { SetAlert } from "../Repository/Actions/AlertAction";
 import { GetWeather, SetLoading } from "../Repository/Actions/WeatherAction";
 
+import { NavLink } from "react-router-dom";
+
 interface ISearchProps {
     title: string;
 }
@@ -44,6 +46,7 @@ const Search: FC<ISearchProps> = ({ title }) => {
                         <button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Поиск</button>
                     </form>
 
+                    <NavLink to={"/"}><button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Назад</button></NavLink>
                 </div>
             </div>
         </div>
