@@ -1,4 +1,4 @@
-import { SET_ERROR } from "../../Constants/ExportConsts";
+import { SET_ERROR } from "../../consts/ExportConsts";
 
 export interface ISetErrorAction {
     type: typeof SET_ERROR;

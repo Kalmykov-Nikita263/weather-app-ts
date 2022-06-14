@@ -1,6 +1,6 @@
-import { IAlertState } from "../Interfaces/States/Alerts/IAlertState";
-import { IAlertAction } from "../Interfaces/Actions/Alerts/IAlertAction";
-import { SET_ALERT } from "../Constants/ExportConsts";
+import { IAlertState } from "../types/States/Alerts/IAlertState";
+import { IAlertAction } from "../types/Actions/Alerts/IAlertAction";
+import { SET_ALERT } from "../consts/ExportConsts";
 
 const initialState: IAlertState = {
     message: ''

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IWeatherData } from "../Repository/Interfaces/Data/IWeatherData";
+import { IWeatherData } from "../types/Data/IWeatherData";
 
 interface IWeatherProps {
     data: IWeatherData;

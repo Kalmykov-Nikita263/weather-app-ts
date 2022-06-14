@@ -2,8 +2,8 @@ import { FC, useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import { SetAlert } from "../Repository/Actions/AlertAction";
-import { GetWeather, SetLoading } from "../Repository/Actions/WeatherAction";
+import { setAlert } from "../actions/AlertAction";
+import { getWeather, setLoading } from "../actions/WeatherAction";
 
 interface ISearchProps {
     title: string;
@@ -15,21 +15,21 @@ const Search: FC<ISearchProps> = ({ title }) => {
 
     const [city, setCity] = useState('');
 
-    const changeInputData = (e: FormEvent<HTMLInputElement>) => {
+    const handleCityChanged = (e: FormEvent<HTMLInputElement>) => {
         setCity(e.currentTarget.value);
     }
 
-    const submitFormData = (e: FormEvent<HTMLFormElement>) => {
+    const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if(city.trim() === '')
         {
-            return dispatch(SetAlert('Введите название города!'));
+            return dispatch(setAlert('Введите название города!'));
         }
 
-        dispatch(SetLoading());
+        dispatch(setLoading());
         //@ts-ignore
-        dispatch(GetWeather(city));
+        dispatch(getWeather(city));
         setCity('');
     }
 
@@ -40,8 +40,8 @@ const Search: FC<ISearchProps> = ({ title }) => {
 
                     <h1 className="title">{title}</h1>
 
-                    <form className="py-5" onSubmit={submitFormData}>
-                        <input type="text" className="input has-text-centered mb-2" placeholder="Введите название города" style={{maxWidth: 300}} value={city} onChange={changeInputData} />
+                    <form className="py-5" onSubmit={handleFormSubmit}>
+                        <input type="text" className="input has-text-centered mb-2" placeholder="Введите название города" style={{maxWidth: 300}} value={city} onChange={handleCityChanged} />
                         <button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Поиск</button>
                     </form>
 

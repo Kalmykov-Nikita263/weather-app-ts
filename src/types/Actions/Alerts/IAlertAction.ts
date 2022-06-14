@@ -1,4 +1,4 @@
-import { SET_ALERT } from "../../../Constants/ExportConsts";
+import { SET_ALERT } from "../../../consts/ExportConsts";
 
 export interface IAlertAction {
     type: typeof SET_ALERT;

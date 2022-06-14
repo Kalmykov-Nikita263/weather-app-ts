@@ -1,4 +1,4 @@
-import { GET_WEATHER } from "../../Constants/ExportConsts";
+import { GET_WEATHER } from "../../consts/ExportConsts";
 import { IWeatherData } from "../Data/IWeatherData";
 
 export interface IGetWeatherAction {

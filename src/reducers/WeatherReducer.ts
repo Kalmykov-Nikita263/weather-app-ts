@@ -1,6 +1,6 @@
-import { IWeatherState } from "../Interfaces/States/IWeatherState";
-import { WeatherActionType } from "../Interfaces/Actions/Types/WeatherActionType";
-import { GET_WEATHER, SET_ERROR, SET_LOADING } from "../Constants/ExportConsts";
+import { IWeatherState } from "../types/States/IWeatherState";
+import { WeatherActionType } from "../types/Actions/Types/WeatherActionType";
+import { GET_WEATHER, SET_ERROR, SET_LOADING } from "../consts/ExportConsts";
 
 const initialState: IWeatherState = {
     type: '',

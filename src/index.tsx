@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 import { Provider } from "react-redux";
-import store from "./Repository/States/RootState";
+import store from "./store/RootState";
 import "../node_modules/bulma/css/bulma.min.css";
 
 const root = ReactDOM.createRoot(
