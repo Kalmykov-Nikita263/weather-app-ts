@@ -5,9 +5,9 @@ import { setError } from "../actions/WeatherAction";
 
 import { RootState } from "../store/RootState";
 
-import Alert from "../ccomponents/Alert";
+import Alert from "../components/Alert";
 import Search from "../containers/Search";
-import Weather from "../ccomponents/Weather";
+import Weather from "../components/Weather";
 
 const WeatherPage: FC = () => {
 
