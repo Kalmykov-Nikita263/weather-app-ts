@@ -3,11 +3,11 @@ import { RootState } from "../States/RootState";
 
 import { IWeatherData } from "../Interfaces/Data/IWeatherData";
 import { IWeatherError } from "../Interfaces/Errors/IWeatherError";
-import { WeatherAction } from "../Interfaces/Actions/Types/WeatherAction";
+import { WeatherActionType } from "../Interfaces/Actions/Types/WeatherActionType";
 
 import {GET_WEATHER, SET_LOADING, SET_ERROR } from "../Constants/ExportConsts";
 
-export const GetWeather = (nameofCity: string): ThunkAction<void, RootState, null, WeatherAction> => {
+export const GetWeather = (nameofCity: string): ThunkAction<void, RootState, null, WeatherActionType> => {
     return async dispatch => {
         try {
             const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${nameofCity}&appid=${process.env.REACT_APP_API_KEY}`);
@@ -33,13 +33,13 @@ export const GetWeather = (nameofCity: string): ThunkAction<void, RootState, nul
     };
 }
 
-export const SetLoading = (): WeatherAction => {
+export const SetLoading = (): WeatherActionType => {
     return {
         type: SET_LOADING
     };
 }
 
-export const SetError = (): WeatherAction => {
+export const SetError = (): WeatherActionType => {
     return {
         type: SET_ERROR,
         payload: ''

@@ -1,5 +1,5 @@
 import { IWeatherState } from "../Interfaces/States/IWeatherState";
-import { WeatherAction } from "../Interfaces/Actions/Types/WeatherAction";
+import { WeatherActionType } from "../Interfaces/Actions/Types/WeatherActionType";
 import { GET_WEATHER, SET_ERROR, SET_LOADING } from "../Constants/ExportConsts";
 
 const initialState: IWeatherState = {
@@ -9,7 +9,7 @@ const initialState: IWeatherState = {
     error: ''
 };
 
-export default(state = initialState, action: WeatherAction): IWeatherState => {
+export default(state = initialState, action: WeatherActionType): IWeatherState => {
     switch(action.type) {
         
         case GET_WEATHER:

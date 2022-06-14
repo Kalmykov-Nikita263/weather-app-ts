@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { SetAlert } from "./Repository/Actions/AlertAction";
 import { SetError } from "./Repository/Actions/WeatherAction";
@@ -10,7 +11,6 @@ import Alert from "./Components/Alert";
 import Weather from "./Components/Weather";
 
 import './App.css';
-import { NavLink } from "react-router-dom";
 
 const App: FC = () => {
 
@@ -48,13 +48,12 @@ const App: FC = () => {
                     <Route path="/" element=
                     {
                         <div className="hero is-light has-text-centered">
-                            <h1 className="title" id="hello" style={{marginTop: '40px'}}>{greeting}</h1>
+                            <h1 className="title" id="hello" style={{marginTop: '40px'}}>{ greeting }</h1>
 
                             <div style={{display: 'flex', justifyContent: 'center', gap: '280px', marginTop: '25px'}}>
                                 <NavLink to={"/time"}><button className="button is-primary is-fullwidth" style={{width: 200, maxWidth: 300, margin: '0 auto'}}>Дата и время</button></NavLink>
                                 <NavLink to={"/weather"}><button className="button is-primary is-fullwidth" style={{width: 200, maxWidth: 300, margin: '0 auto'}}>Погода</button></NavLink>
                             </div>
-
                         </div>
                     } />
 

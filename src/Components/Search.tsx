@@ -1,10 +1,9 @@
 import { FC, useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 import { SetAlert } from "../Repository/Actions/AlertAction";
 import { GetWeather, SetLoading } from "../Repository/Actions/WeatherAction";
-
-import { NavLink } from "react-router-dom";
 
 interface ISearchProps {
     title: string;
