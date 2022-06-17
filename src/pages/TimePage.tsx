@@ -1,11 +1,13 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const TimePage: FC = () => {
 
     const [dateTime, setDateTime] = useState<string>("");
 
-    setInterval(() => setDateTime(new Date().toLocaleString()), 0);
+    useEffect(() => {
+        setInterval(() => setDateTime(new Date().toLocaleString()), 0);
+    }, []);
 
     return (
         <div className="has-text-centered" style={{position: 'absolute', top: '50%', left: '50%', bottom: '40px', transform: 'translate(-50%, -50%)'}}>
