@@ -19,7 +19,7 @@ const Search: FC<ISearchProps> = ({ title }) => {
         setCity(e.currentTarget.value);
     }
 
-    const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSearchCityWeather = (e: FormEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
         if(city.trim() === '')
@@ -40,9 +40,9 @@ const Search: FC<ISearchProps> = ({ title }) => {
 
                     <h1 className="title">{title}</h1>
 
-                    <form className="py-5" onSubmit={handleFormSubmit}>
+                    <form className="py-5">
                         <input type="text" className="input has-text-centered mb-2" placeholder="Введите название города" style={{maxWidth: 300}} value={city} onChange={handleCityChanged} />
-                        <button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Поиск</button>
+                        <button className="button is-primary is-fullwidth" onClick={handleSearchCityWeather} style={{maxWidth: 300, margin: '0 auto'}}>Поиск</button>
                     </form>
 
                     <NavLink to={"/"}><button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Назад</button></NavLink>
