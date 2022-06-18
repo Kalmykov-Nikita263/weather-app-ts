@@ -6,7 +6,12 @@ const TimePage: FC = () => {
     const [dateTime, setDateTime] = useState<string>("");
 
     useEffect(() => {
-        setInterval(() => setDateTime(new Date().toLocaleString()), 0);
+        const timer = setInterval(() => setDateTime(new Date().toLocaleString()), 0);
+        
+        return () => {
+            clearInterval(timer);
+        }
+        
     }, []);
 
     return (
