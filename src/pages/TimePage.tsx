@@ -17,7 +17,7 @@ const TimePage: FC = () => {
     return (
         <div className="has-text-centered" style={{position: 'absolute', top: '50%', left: '50%', bottom: '40px', transform: 'translate(-50%, -50%)'}}>
             <h1 className="title">Текущая дата и время - { dateTime }</h1>
-            <NavLink to={"/"}><button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Назад</button></NavLink>
+            <NavLink to={"/weather-app-ts"}><button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Назад</button></NavLink>
         </div>
     );
 }

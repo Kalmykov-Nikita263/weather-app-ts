@@ -45,7 +45,7 @@ const Search: FC<ISearchProps> = ({ title }) => {
                         <button className="button is-primary is-fullwidth" onClick={handleSearchCityWeather} style={{maxWidth: 300, margin: '0 auto'}}>Поиск</button>
                     </form>
 
-                    <NavLink to={"/"}><button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Назад</button></NavLink>
+                    <NavLink to={"/weather-app-ts"}><button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Назад</button></NavLink>
                 </div>
             </div>
         </div>
